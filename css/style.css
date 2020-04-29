@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+  height: 100%;
   margin: 0px;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
@@ -27,9 +28,9 @@ h1 {
 }
 
 #map {
-  width: 750px;
+  width: 1837px;
   margin: 0 auto;
-  height: 375px;
+  height: 600px;
 }
 
 #controls {
