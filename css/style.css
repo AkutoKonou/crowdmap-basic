@@ -2,9 +2,10 @@
 
 body {
   height: 100%;
-  margin: 0px;
+  margin: 0;
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
+
 
 img {
   float: left;
@@ -29,8 +30,8 @@ h1 {
 
 #map {
   width: 100%;
-  margin: 0 auto;
-  height: 600px;
+  margin: 0;
+  height: 400px;
 }
 
 #controls {
