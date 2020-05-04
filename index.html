@@ -230,7 +230,15 @@
 	    
 	    
 	    
-	    
+function main() {
+		  
+		var bigmapheight = 650;
+	  	var smallmapheight = 300;
+	  	var mapbreakwidth = 720;
+	  	var highzoom = 8;
+	  	var lowzoom = 7;
+	  	var initzoom;
+		var vizjson = 'https://mediafin.cartodb.com/api/v2/viz/6a800846-5607-11e5-b2d0-0e4fddd5de28/viz.json';	    
 	    
 //Set initial mapheight, based on the calculated width of the map container
 		if ($("#map").width() > mapbreakwidth) {
