@@ -32,11 +32,6 @@ h1 {
   width: 100%;
   margin: 0;
   height: 400px;
-  position: relative;
-  height: 100%;
-  outline: none;
-  touch-action: none;
-  background-color: #445a71;position: relative;
 }
 
 #controls {
