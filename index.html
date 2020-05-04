@@ -227,6 +227,68 @@
 		//      };
 		//      getGeoJSON();
 		}
+	    
+	    
+	    
+	    
+	    
+//Set initial mapheight, based on the calculated width of the map container
+		if ($("#map").width() > mapbreakwidth) {
+			initzoom = highzoom;
+			$("#map").height(bigmapheight);
+		}
+		else {
+			initzoom = lowzoom;
+			$("#map").height(smallmapheight);
+		};
+		  
+        var map = new L.Map('map', {
+          center: [50.45,4.45],
+          zoom: initzoom
+        });
+		  
+        L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+          attribution: 'Stamen'
+        }).addTo(map);
+		  
+        cartodb.createLayer(map, vizjson)
+            .addTo(map)
+         .on('done', function(layer) {
+           layer.setInteraction(true);
+		  
+          layer.on('error', function(err) {
+            cartodb.log.log('error: ' + err);
+          });	
+        })
+		.on('error', function() {
+          cartodb.log.log("some error occurred");
+        });
+		  
+		//Use Leaflets resize event to set new map height and zoom level
+		map.on('resize', function(e) {
+		  	if (e.newSize.x < mapbreakwidth) {
+				map.setZoom(lowzoom);
+				$("#map").css('height', smallmapheight);
+			};
+			  
+			if (e.newSize.x > mapbreakwidth) {
+				map.setZoom(highzoom);
+				$("#map").css('height', bigmapheight);
+				$("#map").css('height', bigmapheight);
+			};
+		  });
+      }
+      // you could use $(window).load(main);
+      window.onload = main;	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
     </script>
   </body>
 </html>
