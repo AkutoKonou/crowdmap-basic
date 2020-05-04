@@ -4,6 +4,10 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Open Sans', Helvetica, sans-serif;
+  position: fixed;
+  top:0 ;
+  left: 0;
+  width: 100%;
 }
 
 
@@ -32,6 +36,11 @@ h1 {
   width: 100%;
   margin: 0;
   height: 400px;
+  position: relative;
+  height: 100%;
+  outline: none;
+  touch-action: none;
+  background-color: #445a71;position: relative;
 }
 
 #controls {
